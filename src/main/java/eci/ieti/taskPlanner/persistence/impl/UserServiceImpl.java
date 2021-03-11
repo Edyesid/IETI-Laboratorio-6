@@ -1,9 +1,7 @@
 package eci.ieti.taskPlanner.persistence.impl;
-
 import eci.ieti.taskPlanner.Model.User;
 import eci.ieti.taskPlanner.persistence.UserPersistence;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,27 +24,33 @@ public class UserServiceImpl implements UserPersistence {
         users.add(user1);
         users.add(user2);
     }
-
     @Override
     public List<User> getAll() {
         return users;
     }
-
     @Override
     public User create(User user) {
-        return new User("789","Edyesid","edyesid@gmail.com","password3");
+        users.add(user);
+        return user;
     }
-
     @Override
     public User update(User user) {
-        user1.setUserID(user.getUserID());
-        user1.setName(user.getName());
-        user1.setEmail(user.getEmail());
-        user1.setPassword(user.getPassword());
+        for (User i: users) {
+            if(i.getUserID() == user.getUserID()) {
+                i.setName(user.getName());
+                i.setEmail(user.getEmail());
+                i.setPassword(user.getPassword());
+                return i;
+            }
+        }
         return user1;
     }
-
     @Override
     public void remove(String userId) {
+        for (User i: users) {
+            if(i.getUserID().equals(userId)) {
+                users.remove(i);
+            }
+        }
     }
 }
