@@ -1,7 +1,11 @@
-IETI Laboratorio 6
-Escuela Colombia de ingenieria Julio Garavito
+# IETI Laboratorio 6
+
+## Escuela Colombia de ingenieria Julio Garavito
+
+## Edwin Yesid Rodriguez Maldonado
 
 ### Part 1: Task Planner API V1
+
 1. Create a new Spring Boot project using the Spring Initializr (https://start.spring.io/). Include the *Spring Web* dependency.
 
 2. Create a Plain Old Java Object (POJO) to map the model for a *User* of the Task Planner PWA.
@@ -18,7 +22,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-spring
 6. Implement a REST controller named *UserController* to expose the services. Use the following resource as example:
 https://spring.io/guides/tutorials/rest/
 
-[](img/controller.png)
+![](img/controller.png)
 
 7. Inject the *UserService* on the controller and redirect the requests to the service.
 
@@ -30,7 +34,7 @@ https://spring.io/guides/tutorials/rest/
 
 2. Read about docker. You can use the following quickstart guide: https://docs.docker.com/get-started/. Then, create a file named *Dockerfile* (without any extension) at the root folder of your java project. Add the following contents:
 
-[](img/dockerfile.png)
+![](img/dockerfile.png)
 
 3. Assemble your artifact and make sure that a jar file was generated under the *build/libs* folder.
 
@@ -44,7 +48,7 @@ https://spring.io/guides/tutorials/rest/
     docker build -t <dockerhub_user>/ieti-backend .
     ```
 	
-	[](img/docker1.png)
+	![](img/docker1.png)
 	
 
 5. Make sure you can run the container locally and it works as expected.
@@ -53,7 +57,7 @@ https://spring.io/guides/tutorials/rest/
     docker run -p 8080:8080 <dockerhub_user>/ieti-backend
     ```
 	
-	[](img/docker2.png)
+	![](img/docker2.png)
 
 6. Push the image to the dockerhub registry:
 
@@ -61,7 +65,7 @@ https://spring.io/guides/tutorials/rest/
     docker push <dockerhub_user>/ieti-backend
     ```
 	
-	[](img/docker3.png)
+	![](img/docker3.png)
 
 7. Deploy your container to Azure. Use the steps in the following guide but referencing the image you just created:
 https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal. Have in mind the port you are using for your app (default is 8080) and configur it in the networking section.
