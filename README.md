@@ -76,6 +76,13 @@ __Note:__ In case you don't have access to an Azure account, read the following 
 
 https://devcenter.heroku.com/articles/container-registry-and-runtime
 
+![](img/heroku1.png)
+![](img/heroku2.png)
+![](img/heroku3.png)
+![](img/heroku4.png)
+![](img/heroku5.png)
+![](img/heroku6.png)
+
 ### Part 3: Consume the Task Planner API from a React JS App
 
 1. Implement the lifecycle method *componentDidMount()* on a React component that displays the Users list. Inside the method use the function fetch to retrieve the User list from the API. For now, returning some sample data from the backend would be enough.
