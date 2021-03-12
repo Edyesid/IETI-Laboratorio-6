@@ -5,4 +5,4 @@ EXPOSE 8080
 ARG OUTPUT_FOLDER=build/libs/
 COPY ${OUTPUT_FOLDER} /app/lib
 WORKDIR /app/lib
-ENTRYPOINT ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-Dserver.port=${PORT}","-jar","demo-0.0.1-SNAPSHOT.jar"]
